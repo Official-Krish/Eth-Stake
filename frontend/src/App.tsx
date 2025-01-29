@@ -6,11 +6,11 @@ import { config } from './config'
 import { Appbar } from './components/Appbar'
 
 function App() {
-
+  const queryClient = new QueryClient();
   return (
     <>
       <WagmiProvider config={config}>
-        <QueryClientProvider client={QueryClient}>
+        <QueryClientProvider client={queryClient}>
           <Appbar />
         </QueryClientProvider>
       </WagmiProvider>

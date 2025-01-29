@@ -1,4 +1,5 @@
 import { useAccount, useConnect, useDisconnect } from 'wagmi'
+import { Dashboard } from './dashboard'
 
 export function Appbar() {
   const { address } = useAccount()
@@ -29,6 +30,7 @@ function Disconnect() {
         <button className='mx-2 border rounded p-2' onClick={() => disconnect()}>
             Disconnect wallet
         </button>
+        <Dashboard />
     </div>
 
 }
